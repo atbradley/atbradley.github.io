@@ -29,6 +29,20 @@
 
 
       <article>
+        <h1><a href="//www.adamtbradley.net/the-dark-side-of-ai-viruses-using-chatbots-for-propagation.html">The Dark Side of AI: Viruses Using Chatbots for Propagation</a></h1>
+        <p>New Scientist highlighted a potential concern in the intersection of AI and cybersecurity. Researchers David Zollikofer at ETH Zurich and Benjamin Zimmerman at Ohio State University developed a simple computer virus that uses large language models to rewrite their code to avoid detection and to spread via email attachments. </p>
+<blockquote>
+<p>“We ask ChatGPT to rewrite the file, keeping the semantic structure intact, but changing the way variables are named and changing the logic a bit,” says Zollikofer. This adaptation allows the altered virus to evade routine antivirus scans once the original format has been identified. </p>
+<p>Once the virus is rewritten by ChatGPT, the program opens up Outlook in the background of Windows, without the user knowing, and scans the most recent email chains. It then takes the content of those emails and prompts ChatGPT to write a contextually relevant reply, referencing an attachment – the virus – in an innocuous way....</p>
+<p>In their experiments, there was around a 50 per cent chance that the AI chatbot’s alterations would cause the virus file to stop working, or, occasionally, for it to realise it was being put to nefarious use and refuse to follow the instructions. But the researchers suggest that the virus would have a good chance of success if it made five to 10 attempts to replicate itself in each computer.</p>
+</blockquote>
+<p>I wonder about the feasibility of implemenenting such a virus in the real world. LLMs are too big to distribute with malware, leaving the system dependent on an outside service. This could be a public API like OpenAI's, or a service run by the malware's creators themselves; either way, it's a weak point for security experts to exploit. In any case, this looks like a new front in the endless conflict with cybercriminals.</p>
+      </article>
+
+
+    <hr />
+
+      <article>
         <h1><a href="//www.adamtbradley.net/ai-assistance-and-its-impact-on-writers-pay.html">AI Assistance and Its Impact on Writers' Pay</a></h1>
         <blockquote>
 <p>Participants were given the chance of completing tasks in one of three modes: independently, without any AI assistance; human-primary, where ChatGPT could assist them in editing and polishing their own work; or AI-primary, where ChatGPT would write the first draft and the person would then edit it. Some were given the choice between human-primary and independent writing, while others were given the choice of AI-primary or independent writing. Those who worked independently were always given $3 for completing their task. AI-assisted tasks were offered to workers with a random amount between $1.50 and $4.50, at $0.25 intervals.</p>
@@ -72,9 +86,9 @@
 	        <nav>
 	          <h2>Categories</h2>
 	          <ul>
+	              <li ><a href="//www.adamtbradley.net/category/ai-security.html">AI Security</a></li>
 	              <li ><a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a></li>
-	              <li ><a href="//www.adamtbradley.net/category/artificial_intelligence.html">artificial_intelligence</a></li>
-	              <li ><a href="//www.adamtbradley.net/category/business-research.html">business research</a></li>
+	              <li ><a href="//www.adamtbradley.net/category/business-research.html">Business Research</a></li>
 	          </ul>
 	        </nav>
 
