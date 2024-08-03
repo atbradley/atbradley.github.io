@@ -194,15 +194,11 @@ article.summary > div {
   margin-left: 28%;
 }
 
-article.full .metadata,
-article.summary .metadata {
+article .metadata {
   padding: 1%;  
   border: 1px dotted #EFEFEF;
   box-shadow: 0.1em 0.1em 0.1em #EFEFEF;
   font-style: italic;
-}
-
-article.full .metadata {
   width: 25%;
   float: right;
   margin: 0 0 2% 1%;
@@ -211,11 +207,19 @@ article.full .metadata {
 article.summary .metadata {
   width: 23%;
   float: left;
-  margin: 0 1% 2% 0 ;
+  margin: 0 1% 2% 0;
 }
 
-.metadata p {
-  margin: 0;
+.metadata {
+  font-weight: bold;
+}
+
+.metadata a {
+  font-weight: normal;
+}
+
+.metadata p, .metadata time, .metadata address {
+  margin: 0 0 0.5em;
 }
 
 /* Listings */
