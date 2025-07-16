@@ -1,254 +1,337 @@
 <!doctype html>
-<html lang="">	
-<head>
-	<meta charset="utf-8"/>
-	<title>AdamTBradley.net</title>	
-	<meta name="author" content="Adam Bradley">
-	
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam T. Bradley - Resume</title>
 
-	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
-	<link rel="stylesheet" href="//www.adamtbradley.net/theme/css/main.css" type="text/css" />
-		
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
+    />
 
-</head>
-	
-<body>
+    <style>
+      :root {
+        --primary-color: #0b7c22;
+        --text-dark: #2c3e50;
+        --text-medium: #606c76;
+        --text-light: #9b9b9b;
+        --background-light: #0b7c2263;
+        --background-white: white;
+        --border-light: #e1e8ed;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+      }
 
+      body {
+        background-color: var(--background-light);
+        font-size: 1.4rem;
+        line-height: 1.6;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+        display: inline-block;
+        font-weight: bold;
+        padding-top: 1rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        display: inline-block;
+      }
+
+      h4 {
+        font-size: 1.6rem;
+        font-style: italic;
+      }
+
+      h2, h3, h4 {
+        margin-bottom: 0;
+        color: var(--text-dark);
+      }
+
+      p {
+        margin-bottom: .5rem;
+        color: var(--text-medium);
+      }
+
+      .container {
+        max-width: 95%;
+        margin: 2rem auto;
+        background: var(--background-white);
+        padding: 4rem;
+        box-shadow: 0 0.5rem 1rem var(--shadow-color);
+        border-radius: 0.4rem;
+        background-color: var(--background-white);
+      }
+
+      .header {
+        text-align: center;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .header h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .header p {
+        font-size: 1.6rem;
+        color: var(--text-medium);
+        margin-bottom: 0.5rem;
+      }
+
+      .row {
+        border-bottom: 1px solid var(--primary-color);
+        padding: 1.5rem 0;
+      }
+
+    .row:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+      .section {
+        margin-bottom: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .job-description ul,
+      .project-description ul {
+        margin-left: 2rem;
+      }
+
+      .job-description li,
+      .project-description li {
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+      }
+
+      .skills-content h3 {
+        display: block;
+      }
+
+      .skills-content ul {
+        margin-bottom: 0;
+      }
+
+      .skills-content ul li {
+        display: inline-block;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .skills-content ul li::before {
+        content: "•";
+        margin-right: 0.5rem;
+        color: var(--primary-color);
+      }
+
+      .skills-content ul li:first-child::before {
+        content: "";
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .contact-info a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .resume-container {
+          margin: 1rem;
+          padding: 2rem;
+        }
+
+        .header h1 {
+          font-size: 2.8rem;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+
+      .print-only {
+        display: none;
+      }
+
+      @media print {
+        body {
+          background: var(--background-white);
+        }
+
+        .container {
+          box-shadow: none;
+          margin: 0;
+          padding: 1rem;
+          max-width: 100%;
+        }
+
+        .print-only {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-	  
-	  <header role="banner">
-	    <div class="feeds">
-	    </div>
-		<a href="//www.adamtbradley.net" class="title">AdamTBradley.net</a>
+      <!-- Header Section -->
+      <header class="header">
+        <h1>Adam T. Bradley</h1>
+        <p>Software Developer</p>
+        <div class="contact-info">
+          <span><a href="mailto:hisself@adambradley.net">hisself@adambradley.net</a></span
+          >   <span><a href="https://www.linkedin.com/in/adam-t-bradley/" target="_blank">LinkedIn</a></span
+          > <span
+            ><a href="https://github.com/atbradley" target="_blank">GitHub</a></span
+          > 
+        </div>
       </header>
-	
-	  <div class="wrapper">
 
-		  <div role="main" class="content">
+      <div class="row">
+        <!-- Experience Section -->
+        
+        <section class="section column">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-content"><h2>Safety Insurance</h2>
+<h3>| Web Applications Developer</h3>
+<h4>November 2021 - Present | Boston, MA</h4>
+<ul>
+<li><strong>Integration and management of APIs:</strong> Integrating our system with vendor APIs, a critical component in offering features such as online billing and signup for our telematics app.</li>
+<li><strong>Research on Generative Artificial Intelligence (GenAI):</strong> Actively involved in Safety's research on GenAI technologies. My focus is on understanding the potential applications of this emerging field and how it can benefit the company. As part of this work, I've developed multiple chatbots designed to assist with specific tasks.</li>
+<li><strong>Continuous learning:</strong> I earned The Institutes' Associate in Information Technology and Associate in Insurance Data Analytics designations.</li>
+</ul>
+<h2>Brown University</h2>
+<h3>| Library Programmer</h3>
+<h4>October 2010 - September 2021 | Providence, RI</h4>
+<p>Developed web applications, primarily in Python, PHP, JavaScript, and XSLT.</p>
+<ul>
+<li><strong>Online Course Reserves Application:</strong> Lead the continued development of <em>OCRA</em>, the Library's custom-built course reserves management app, successfully upgrading it to support several new versions of PHP and MySQL. Enhanced OCRA's functionality by integrating free-text and structured API searches, simplifying faculty's addition of course materials. Also created a Chrome extension to simplify the process of requesting items found across the Internet.</li>
+<li><strong>Inscriptions of Israel-Palestine:</strong> Enhanced Solr query efficiency and developed a web-based map interface, furthering the project's research impact and user engagement.</li>
+</ul>
+<h2>University of Rhode Island</h2>
+<h3>Part-Time Faculty</h3>
+<h4>August - December 2019 | Kingston, RI</h4>
+<p>Designed and taught <strong>CSC 593, &quot;Programming for Scientists&quot;,</strong> a three-credit course in introductory computer programming for non-Computer Science graduate students. Assisted students in the development of data science projects relevant to their academic fields, which included engineering, marine and environmental sciences and English literature.</p>
+</div>
+        </section>
+        
 
+      
+        <!-- Projects Section -->
+        
+        <section class="section column">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-content"><h2>LLM-based Redmine Search</h2>
+<h3>| Sole Developer</h3>
+<h4>July 2024 - Present | Safety Insurance</h4>
+<p>Developed a chat-based search interface for our project management and technical documentation platform, implemented as a FastAPI application and a Redmine plugin.</p>
+<ul>
+<li>Used a combination of Cache-augmented generation and agentic tool-use strategies.</li>
+<li>Server-side code evolved into an agent &quot;microframework&quot; called <code>smoltalk</code>.</li>
+</ul>
+<h2>Agent Assistant Chatbot</h2>
+<h3>| Sole Developer</h3>
+<h4>September 2024 - Present | Safety Insurance</h4>
+<p>Initially a graduate school project, this prototype chatbot is intended to help insurance agents navigate our agent-facing web applications.</p>
+<h2><em>Furnace and Fugue</em></h2>
+<h3>| Lead Developer</h3>
+<h4>November 2017 - July 2020 | Brown University Library</h4>
+<p><em>Furnace and Fugue: A Digital Edition of Michael Maier’s Atalanta fugiens</em> was the first project of the Brown University Library's Digital Publishing Initiative. In my role as main developer, I:</p>
+<ul>
+<li>Developed a Python-based static site generator, fugue, that uses XSL for templating.</li>
+<li>Implemented a client-side search using the Lunr JavaScript library.</li>
+</ul>
+</div>
+        </section>
+        
 
+      </div>
 
-      <article>
-        <h1><a href="//www.adamtbradley.net/more-on-model-collapse.html">More on Model Collapse</a></h1>
-<div class="metadata">
-  <time datetime="2024-08-18T00:00:00-04:00" pubdate>Sun 18 August 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.livescience.com/technology/artificial-intelligence/ai-models-trained-on-ai-generated-data-could-spiral-into-unintelligible-nonsense-scientists-warn">AI models trained on AI-generated data could spiral into unintelligible nonsense, scientists warn</a></cite></p>
+      <div class="row">
+        <!-- Education Section -->
+        
+        <section class="section column">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content"><h2>Dakota State University</h2>
+<h3>| Master of Science in Artificial Intelligence</h3>
+<h4>(Expected May 2027)</h4>
+<h4>Madison, SD</h4>
+<p>Coursework so far has included Advanced Artificial Intelligence, Programming for Data Analytics, and Data Structures.</p>
+<h2>University of Rhode Island</h2>
+<h3>| Bachelor of Arts in History and German</h3>
+<h4>Kingston, RI</h4>
+</div>
+        </section>
+        
 
-  in <a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/artificial_intelligence.html">artificial_intelligence</a>, <a href="//www.adamtbradley.net/tag/data_science.html">data_science</a>, <a href="//www.adamtbradley.net/tag/big_data.html">big_data</a>, <a href="//www.adamtbradley.net/tag/deep_learning.html">deep_learning</a>, <a href="//www.adamtbradley.net/tag/machine_learning.html">machine_learning</a>, <a href="//www.adamtbradley.net/tag/natural_language_processing.html">natural_language_processing</a>, <a href="//www.adamtbradley.net/tag/tech.html">tech</a>, <a href="//www.adamtbradley.net/tag/innovation.html">innovation</a></p>  
-</div>        <blockquote>
-<p>&ldquo;architecture. In addition to being home to some of the world’s largest populations of black @-@ tailed jackrabbits, white @-@ tailed jackrabbits, blue @-@ tailed jackrabbits, red @-@ tailed jackrabbits, yellow @-.&rdquo;</p>
-</blockquote>
-<p>That&rsquo;s a large language model trained on human input from Wikipedia then trained on its own output for nine iterations.</p>
-<blockquote>
-<p>&ldquo;For now, our store of human-generated data is large enough that current AI models won’t collapse overnight,&rdquo; the researchers noted. &ldquo;But to avoid a future where they do, AI developers will need to take more care about what they choose to feed into their systems. This doesn&rsquo;t mean doing away with synthetic data entirely, but it does mean it will need to be better designed if models built on it are to work as intended.&rdquo;</p>
-</blockquote>
-      </article>
+        <!-- Skills Section -->
+        
+        <section class="section column">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-content"><h2>Programming</h2>
+<h3>10+ years:</h3>
+<ul>
+<li>Python (Django, FastAPI, Numpy, Pandas, LangChain)</li>
+<li>PHP</li>
+<li>XSLT</li>
+</ul>
+<h3>1+ years:</h3>
+<ul>
+<li>Rust</li>
+</ul>
+<h2>Technology</h2>
+<ul>
+<li>Git/Github</li>
+<li>Linux</li>
+<li>Windows</li>
+<li>Artificial Intelligence/Machine Learning</li>
+<li>Chatbot Design</li>
+</ul>
+</div>
+        </section>
+        
 
-
-    <hr />
-
-      <article>
-        <h1><a href="//www.adamtbradley.net/the-risk-of-llms-collapsing-under-their-own-output.html">The Risk of LLMs Collapsing Under Their Own Output</a></h1>
-<div class="metadata">
-  <time datetime="2024-08-05T00:00:00-04:00" pubdate>Mon 05 August 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.theregister.com/2024/07/25/ai_will_eat_itself/">AI models face collapse if they overdose on their own output</a></cite></p>
-
-  in <a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/large_language_models.html">large_language_models</a>, <a href="//www.adamtbradley.net/tag/model_collapse.html">model_collapse</a></p>  
-</div>        <p>I think this is the first article I&rsquo;ve seen that really explains the problem of &ldquo;model collapse&rdquo; as a result of training an LLM with LLM-generated data: AIs may fail to pick up less common lines of text in training datasets, which means subsequent models trained on the output cannot carry forward those nuances.</p>
-<p>Emily Wenger, a Duke University assistant professor, used the example of an AI-based dog image generator:</p>
-<blockquote>
-<p>&ldquo;The AI model will gravitate towards recreating the breeds of dog most common in its training data, so might over-represent the Golden Retriever compared with the Petit Basset Griffon Vendéen, given the relative prevalence of the two breeds. If subsequent models are trained on an AI-generated data set that over-represents Golden Retrievers, the problem is compounded. With enough cycles of over-represented Golden Retriever, the model will forget that obscure dog breeds such as Petit Basset Griffon Vendéen exist and generate pictures of just Golden Retrievers. Eventually, the model will collapse, rendering it unable to generate meaningful content.&rdquo;</p>
-</blockquote>
-      </article>
-
-
-    <hr />
-
-      <article>
-        <h1><a href="//www.adamtbradley.net/openai-collects-training-data-from-worlds-lamest-content-farm.html">OpenAI Collects Training Data From “World’s Lamest Content Farm”</a></h1>
-<div class="metadata">
-  <time datetime="2024-08-01T00:00:00-04:00" pubdate>Thu 01 August 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.404media.co/openai-training-bot-crawls-worlds-lamest-content-farm-3-million-times-in-one-day/">OpenAI Training Bot Crawls 'World's Lamest Content Farm' 3 Million Times in One Day</a></cite></p>
-
-  in <a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/chatgpt.html">ChatGPT</a>, <a href="//www.adamtbradley.net/tag/openai.html">OpenAI</a>, <a href="//www.adamtbradley.net/tag/web_crawling.html">web_crawling</a>, <a href="//www.adamtbradley.net/tag/lolz.html">lolz</a></p>  
-</div>        <h3>“If you were wondering what they&rsquo;re using to train GPT-5, well, now you know”</h3>
-<p>That&rsquo;s John Levine, creator of &ldquo;the world&rsquo;s lamest content farm&rdquo;. Recently, Levine&rsquo;s &ldquo;farm&rdquo;&ndash;billions of randomly-generated, single-page websites&mdash;caught the attention of OpenAI&rsquo;s training bot, which then crawled the site millions of times in a few days.</p>
-<blockquote>
-<p>Rather than being one giant website, each page has its own domain name. A badly written spider, like, for example, OpenAI’s will say ‘Oh look at all these websites that are linked together!’ and will essentially get trapped pinging the sites. At one point Wednesday, OpenAI’s GPTBot was crawling Levine’s site as many as 150 times per second, according to activity logs I viewed. It hit his pages more than 3 million times over the last several days, he said.</p>
-</blockquote>
-<p>Levine finds the situation amusing, and says both Bing&rsquo;s crawler bot and an Amazon bot have previously fallen into the same trap. He points out that running a web spider is a tricky task that requires experience to avoid such problems: &ldquo;All of these pages look the same and they’re all in the same IP address and they all share the same SSL certificate. It’s not really making an attempt to hide the fact that all 6 billion pages are really the same, but you actually have to have some experience doing this stuff to avoid hammering on people.&rdquo;</p>
-<p>This highlights just one challenging aspect of training AI models. As generative AI evolves, we need to question and scrutinize the methods and data sources used.</p>
-      </article>
-
-
-    <hr />
-
-      <article>
-        <h1><a href="//www.adamtbradley.net/ai-adoption-among-non-white-americans.html">AI Adoption Among Non-white Americans</a></h1>
-<div class="metadata">
-  <time datetime="2024-07-28T00:00:00-04:00" pubdate>Sun 28 July 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.economist.com/united-states/2024/06/27/non-white-american-parents-are-embracing-ai-faster-than-white-ones">Non-white American parents are embracing AI faster than white ones</a></cite></p>
-
-  in <a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/digital_divide.html">digital_divide</a>, <a href="//www.adamtbradley.net/tag/education.html">education</a>, <a href="//www.adamtbradley.net/tag/economics.html">economics</a></p>  
-</div>        <p>&ldquo;The digital divide seems to have flipped&rdquo; The Economist reports&ndash;non-white American parents and educators are adopting artificial intelligence technologies faster than their white counterparts. This trend suggests the technology may offer an unexpected advantage to disadvantaged communities, despite fears that generative AI could increase disparities:</p>
-<blockquote>
-<p>Yet ai is disrupting the digital-divide narrative. It is true that algorithms have disadvantaged black and Hispanic people in health care, policing and the court system. Facial-recognition software continues to struggle with non-white faces. Some ai chatbots have generated racist content. But when it comes to using ai personally, non-white families may be getting an edge.</p>
-<p>According to the Walton Family Foundation, funded by members of the family behind Walmart, while 72% of white parents say they use AI personally, 80% of black and 84% of Hispanic parents say they do. Black teachers use AI in the classroom more often, and non-white children are also more likely to use AI at home: 68% of white parents say that their child uses AI chatbots for school, compared with 75% of Hispanic and 81% of black parents.</p>
-</blockquote>
-      </article>
-
-
-    <hr />
-
-      <article>
-        <h1><a href="//www.adamtbradley.net/the-dark-side-of-ai-viruses-using-chatbots-for-propagation.html">The Dark Side of AI: Viruses Using Chatbots for Propagation</a></h1>
-<div class="metadata">
-  <time datetime="2024-07-05T00:00:00-04:00" pubdate>Fri 05 July 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.newscientist.com/article/2438132-computer-viruses-can-spread-by-using-chatgpt-to-write-sneaky-emails/">Computer viruses can spread by using ChatGPT to write sneaky emails</a></cite></p>
-
-  in <a href="//www.adamtbradley.net/category/ai-security.html">AI Security</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/chatgpt.html">ChatGPT</a>, <a href="//www.adamtbradley.net/tag/artificial_intelligence.html">artificial_intelligence</a>, <a href="//www.adamtbradley.net/tag/cybersecurity.html">cybersecurity</a>, <a href="//www.adamtbradley.net/tag/malware.html">malware</a></p>  
-</div>        <p>New Scientist highlighted a potential concern in the intersection of AI and cybersecurity. Researchers David Zollikofer at ETH Zurich and Benjamin Zimmerman at Ohio State University developed a simple computer virus that uses large language models to rewrite their code to avoid detection and to spread via email attachments. </p>
-<blockquote>
-<p>“We ask ChatGPT to rewrite the file, keeping the semantic structure intact, but changing the way variables are named and changing the logic a bit,” says Zollikofer. This adaptation allows the altered virus to evade routine antivirus scans once the original format has been identified. </p>
-<p>Once the virus is rewritten by ChatGPT, the program opens up Outlook in the background of Windows, without the user knowing, and scans the most recent email chains. It then takes the content of those emails and prompts ChatGPT to write a contextually relevant reply, referencing an attachment – the virus – in an innocuous way....</p>
-<p>In their experiments, there was around a 50 per cent chance that the AI chatbot’s alterations would cause the virus file to stop working, or, occasionally, for it to realise it was being put to nefarious use and refuse to follow the instructions. But the researchers suggest that the virus would have a good chance of success if it made five to 10 attempts to replicate itself in each computer.</p>
-</blockquote>
-<p>I wonder about the feasibility of implemenenting such a virus in the real world. LLMs are too big to distribute with malware, leaving the system dependent on an outside service. This could be a public API like OpenAI&rsquo;s, or a service run by the malware&rsquo;s creators themselves; either way, it&rsquo;s a weak point for security experts to exploit. In any case, this looks like a new front in the endless conflict with cybercriminals.</p>
-      </article>
+        <!-- Interests Section -->
+        
+      </div>
 
 
-    <hr />
-
-      <article>
-        <h1><a href="//www.adamtbradley.net/ai-assistance-and-its-impact-on-writers-pay.html">AI Assistance and Its Impact on Writers' Pay</a></h1>
-<div class="metadata">
-  <time datetime="2024-07-01T00:00:00-04:00" pubdate>Mon 01 July 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.newscientist.com/article/2434307-writers-accept-lower-pay-when-they-use-ai-to-help-with-their-work/">Writers accept lower pay when they use AI to help with their work</a></cite></p>
-
-  in <a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/business.html">business</a>, <a href="//www.adamtbradley.net/tag/tech.html">tech</a>, <a href="//www.adamtbradley.net/tag/labor.html">labor</a>, <a href="//www.adamtbradley.net/tag/writing.html">writing</a></p>  
-</div>        <blockquote>
-<p>Participants were given the chance of completing tasks in one of three modes: independently, without any AI assistance; human-primary, where ChatGPT could assist them in editing and polishing their own work; or AI-primary, where ChatGPT would write the first draft and the person would then edit it. Some were given the choice between human-primary and independent writing, while others were given the choice of AI-primary or independent writing. Those who worked independently were always given $3 for completing their task. AI-assisted tasks were offered to workers with a random amount between $1.50 and $4.50, at $0.25 intervals.</p>
-</blockquote>
-<p>Participants were willing to give up about $0.85&ndash;28% of the total they would have been paid&ndash;to have a first draft written by AI. Participants saw no meaningful difference in the quality of the work they produced with and without AI assistance; so it seems this is entirely down to the AIs taking over some of the work involved in the writing tasks.</p>
-<p>This result suggests to me that much of any efficiency savings produced by LLM technology is likely to be enjoyed by employers, not workers. Workers can produce more cheaply and quickly, reducing the overall need for labor. I&rsquo;m not clear what that means for individual workers&ndash;possibly those more skilled in working with AI assistants will benefit.</p>
-      </article>
-
-
-    <hr />
-
-      <article>
-        <h1><a href="//www.adamtbradley.net/diy-propaganda-machines.html">DIY Propaganda Machines</a></h1>
-<div class="metadata">
-  <time datetime="2024-06-27T00:00:00-04:00" pubdate>Thu 27 June 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.wsj.com/politics/how-i-built-an-ai-powered-self-running-propaganda-machine-for-105-e9888705">How I Built an AI-Powered, Self-Running Propaganda Machine for $105</a></cite></p>
-
-  in <a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/ai-risks.html">ai risks</a>, <a href="//www.adamtbradley.net/tag/propaganda.html">propaganda</a>, <a href="//www.adamtbradley.net/tag/misinformation.html">misinformation</a></p>  
-</div>        <p>Earlier this Spring, the <em>Wall Street Journal</em> suggested a fun DIY project for an election-year summer. Jack Brewster of NewsGuard explained,</p>
-<blockquote>
-<p>It took me two days, $105 and no expertise whatsoever to launch a fully automated, AI-generated local news site capable of publishing thousands of articles a day—with the partisan news coverage framing of my choice, nearly all rewritten without credit from legitimate news sources. I created a website specifically designed to support one political candidate against another in a real race for the U.S. Senate. And I made it all happen in a matter of hours.</p>
-</blockquote>
-<p>I&rsquo;m nervous and morbidly curious to see what effect LLM technology will have on the upcoming US election.</p>
-      </article>
-
-
-    <hr />
-
-      <article>
-        <h1><a href="//www.adamtbradley.net/decreasing-enthusiasm-for-ai-projects.html">Decreasing Enthusiasm for AI Projects</a></h1>
-<div class="metadata">
-  <time datetime="2024-06-25T00:00:00-04:00" pubdate>Tue 25 June 2024</time>
-    <address class="vcard author">
-      by <a class="url fn" href="//www.adamtbradley.net/author/adam-bradley.html">Adam Bradley</a>
-    </address>
-  
-    <p>about: <cite><a href="https://www.theregister.com/2024/06/12/survey_ai_projects/">Payoff from AI projects is 'dismal', biz leaders complain</a></cite></p>
-
-  in <a href="//www.adamtbradley.net/category/business-research.html">Business Research</a>
-<p class="tags">tagged <a href="//www.adamtbradley.net/tag/ai-adoption.html">ai adoption</a>, <a href="//www.adamtbradley.net/tag/business-investment.html">business investment</a>, <a href="//www.adamtbradley.net/tag/generative-ai.html">generative ai</a></p>  
-</div>        <blockquote>
-<p>&ldquo;The honeymoon phase of generative AI is over,&rdquo; the company said in its 2024 Generative AI Global Benchmark Study, released on Tuesday. &ldquo;While leaders remain enthusiastic about its potential to transform businesses, the initial euphoria has given way to a more measured approach.&rdquo;</p>
-</blockquote>
-<p>That&rsquo;s <a href="https://lucidworks.com/">Lucidworks</a>, in a recent study citing cost, data security, and safety reasons for businesses&rsquo; growing skepticism about Generative AI. The study, &ldquo;<a href="https://lucidworks.com/ebooks/2024-ai-benchmark-survey/">The State of Generative AI in Global Business: 2024 Benchmark Report</a>&rdquo;, was released on Tuesday and indicates a shift from initial euphoria towards a more measured approach.</p>
-<blockquote>
-<p>According to the results of the survey, 63 percent of global companies plan to increase spending on AI in the next twelve months, compared to 93 percent in 2023 when Lucidworks conducted its first investigation.</p>
-</blockquote>
-<p>The financial benefits of implemented AI projects have been unsatisfactory, with 42% of companies seeing no significant benefit from their generative AI initiatives. So far, few companies have managed to exit the pilot testing phase in their initiatives.</p>
-      </article>
-
-
-		  </div>	
-		  
-		  <div class="sidebar">
-
-	        <nav>
-	          <h2>Categories</h2>
-	          <ul>
-	              <li ><a href="//www.adamtbradley.net/category/ai-security.html">AI Security</a></li>
-	              <li ><a href="//www.adamtbradley.net/category/artificial-intelligence.html">Artificial Intelligence</a></li>
-	              <li ><a href="//www.adamtbradley.net/category/business-research.html">Business Research</a></li>
-	          </ul>
-	        </nav>
-
-	          <aside>
-	          <h2>Elsewhere</h2>
-			    <ul class="social">
-				  <li><a href="https://www.linkedin.com/in/adam-t-bradley/">LinkedIn</a><i></i></li>
-				  <li><a href="https://github.com/atbradley">GitHub</a><i></i></li>
-			    </ul>
-			  </aside>
-
-
-		  </div>
-
-	  </div>
-
-      <footer>
-		<p role="contentinfo">
-		  © 2024 Adam Bradley - Proudly powered by 
-		  <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. 
-		  Theme: a gently modified version of 
-		  <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
-    	</p>
-
-	  </footer>	
-
-	</div>
-	
-
-</body>
+      <!-- Publications Section (if you have any) -->
+      
+    </div>
+  </body>
 </html>
